@@ -6,7 +6,11 @@
 
 <?php include 'Program.class.php'; ?>
 <?php include 'SvgRenderer.class.php'; ?>
+<?php include 'Shape.class.php'; ?>
 <?php include 'Rectangle.class.php'; ?>
+<?php include 'Circle.class.php'; ?>
+<?php include 'Ellipse.class.php'; ?>
+<?php include 'Triangle.class.php'; ?>
 
 <?php
     $program = new Program();

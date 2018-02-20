@@ -26,13 +26,13 @@
             array_push($this->elements, $svg);
         }
 
-        public function drawSquare($x, $y, $width, $color){
-            $svg = '<rect x="'.$x.'" y="'.$y.'" width="'.$width.'" height="'.$width.'" fill="'.$color.'"/>';
+        public function drawEllipse($x, $y, $rx, $ry, $color){
+            $svg = '<ellipse cx="'.$x.'" cy="'.$y.'" rx="'.$rx.'" ry="'.$ry.'" fill="'.$color.'"/>';
             array_push($this->elements, $svg);
         }
 
-        public function drawEllipse($x, $y, $rx, $ry, $color){
-            $svg = '<ellipse cx="'.$x.'" cy="'.$y.'" rx="'.$rx.'" ry="'.$ry.'" fill="'.$color.'"/>';
+        public function drawTriangle($p1, $p2, $p3, $color){
+            $svg = '<polygon points="'.$p1.' ,'.$p2.' ,'.$p3.'" fill="'.$color.'"/>';
             array_push($this->elements, $svg);
         }
 

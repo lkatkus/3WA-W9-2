@@ -21,6 +21,11 @@
 
         public function drawRectangle($x, $y, $width, $height, $color, $opacity){
             $svg = '<rect x="'.$x.'" y="'.$y.'" width="'.$width.'" height="'.$height.'" opacity="'.$opacity.'" fill="'.$color.'"/>';
+
+            if($this->width < $width || $this->height < $height){
+                throw new Exception('=== Element cannot set be outside '.$this->width.' px ===');
+            }
+
             array_push($this->elements, $svg);
         }
 
@@ -45,7 +50,7 @@
         }
 
         public function drawText($x, $y, $content) {
-            $svg = '<text x="'.$x.'" y="'.$y.'" font-family="Arial" font-size="30" fill="red">'.$content.'</text>';
+            $svg = '<text font-family="Arial" font-size="30" fill="red" transform="rotate(45)">'.$content.'</text>';
 
             array_push($this->elements, $svg);
         }

@@ -4,7 +4,7 @@
         public $radius;
 
         public function draw(SvgRenderer $renderer){
-            $renderer -> drawCircle($this -> x, $this -> y, $this -> radius, $this -> color);
+            $renderer -> drawCircle($this -> location -> x, $this -> location -> y, $this -> radius, $this -> color);
         }
 
         public function setRadius($radius){

@@ -13,7 +13,17 @@
         }
 
         public function draw(SvgRenderer $renderer){
-            $renderer -> drawRectangle($this -> x, $this -> y, $this -> width, $this -> height, $this -> color, $this -> opacity);
+            try{
+                $renderer -> drawRectangle(
+                    $this -> location -> x,
+                    $this -> location -> y,
+                    $this -> width,
+                    $this -> height,
+                    $this -> color,
+                    $this -> opacity);
+            } catch(Exception $error){
+                echo $error->getMessage();
+            }
         }
 
         public function setSize($width, $height){

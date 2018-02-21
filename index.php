@@ -8,13 +8,17 @@
 <?php include 'SvgRenderer.class.php'; ?>
 <?php include 'Shape.class.php'; ?>
 <?php include 'Rectangle.class.php'; ?>
+<?php include 'Square.class.php'; ?>
 <?php include 'Circle.class.php'; ?>
 <?php include 'Ellipse.class.php'; ?>
+<?php include 'CircleFromEllipse.class.php'; ?>
 <?php include 'Triangle.class.php'; ?>
+<?php include 'Polygon.class.php'; ?>
+<?php include 'Text.class.php'; ?>
 
 <?php
     $program = new Program();
-    $renderer = new SvgRenderer();
+    $renderer = new SvgRenderer(700,250,'grey');
 ?>
 
 <!DOCTYPE html>
